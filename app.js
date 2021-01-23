@@ -1,12 +1,11 @@
 const express = require("express");
 const bodyParser = require('body-parser');
 const app = express();
-const cors = require('cors');
 
 let storage = [];
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(cors());
+
 app.get('/guide', function (req,res){
     res.send(storage);
 });
